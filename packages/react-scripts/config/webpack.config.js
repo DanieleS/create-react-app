@@ -349,12 +349,14 @@ module.exports = function(webpackEnv) {
               loader: require.resolve('babel-loader'),
               options: {
                 customize: require.resolve(
-                  'babel-preset-react-app/webpack-overrides'
+                  '@photogether/babel-preset-react-app/webpack-overrides'
                 ),
                 // @remove-on-eject-begin
                 babelrc: false,
                 configFile: false,
-                presets: [require.resolve('babel-preset-react-app')],
+                presets: [
+                  require.resolve('@photogether/babel-preset-react-app'),
+                ],
                 // Make sure we have a unique cache identifier, erring on the
                 // side of caution.
                 // We remove this when the user ejects because the default
@@ -366,7 +368,7 @@ module.exports = function(webpackEnv) {
                     : isEnvDevelopment && 'development',
                   [
                     'babel-plugin-named-asset-import',
-                    'babel-preset-react-app',
+                    '@photogether/babel-preset-react-app',
                     'react-dev-utils',
                     'react-scripts',
                   ]
@@ -405,7 +407,9 @@ module.exports = function(webpackEnv) {
                 compact: false,
                 presets: [
                   [
-                    require.resolve('babel-preset-react-app/dependencies'),
+                    require.resolve(
+                      '@photogether/babel-preset-react-app/dependencies'
+                    ),
                     { helpers: true },
                   ],
                 ],
@@ -418,7 +422,7 @@ module.exports = function(webpackEnv) {
                     : isEnvDevelopment && 'development',
                   [
                     'babel-plugin-named-asset-import',
-                    'babel-preset-react-app',
+                    '@photogether/babel-preset-react-app',
                     'react-dev-utils',
                     'react-scripts',
                   ]
