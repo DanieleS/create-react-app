@@ -118,7 +118,12 @@ module.exports = function(api, opts, env) {
       // don't work without it: https://github.com/babel/babel/issues/7215
       require('@babel/plugin-transform-destructuring').default,
       // Turn on legacy decorators for TypeScript files
-      [require('@babel/plugin-proposal-decorators').default, true],
+      [
+        require('@babel/plugin-proposal-decorators').default,
+        {
+          legacy: true,
+        },
+      ],
       // class { handleClick = () => { } }
       // Enable loose mode to use assignment instead of defineProperty
       // See discussion in https://github.com/facebook/create-react-app/issues/4263

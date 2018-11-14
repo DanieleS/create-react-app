@@ -1,6 +1,6 @@
 {
   "name": "@photogether/babel-preset-react-app",
-  "version": "6.2.0",
+  "version": "6.2.6",
   "description": "Babel preset used by Create React App",
   "repository": "facebook/create-react-app",
   "license": "MIT",
