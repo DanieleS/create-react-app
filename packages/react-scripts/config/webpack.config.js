@@ -313,7 +313,9 @@ module.exports = function(webpackEnv) {
                 eslintPath: require.resolve('eslint'),
                 // @remove-on-eject-begin
                 baseConfig: {
-                  extends: [require.resolve('eslint-config-react-app')],
+                  extends: [
+                    require.resolve('@photogether/eslint-config-react-app'),
+                  ],
                   settings: { react: { version: '999.999.999' } },
                 },
                 ignore: false,
